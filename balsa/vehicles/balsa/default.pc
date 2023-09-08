@@ -1,0 +1,12 @@
+{
+	"format": 2,
+	"licenseName": "BALSA",
+	"mainPartName": "fuselage",
+	"model": "balsa",
+	"parts": {
+		"ballast": "ballast",
+		"wing": "wing",
+		"elevator": "elevator",
+		"rudder": "rudder"
+	}
+}

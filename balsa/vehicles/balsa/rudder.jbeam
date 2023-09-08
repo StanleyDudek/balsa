@@ -1,0 +1,171 @@
+{
+	"rudder":{
+		"information":{
+			"authors":"Dudekahedron",
+			"name":"rudder",
+			"value":0,
+		},
+		"slotType":"rudder",
+		
+		"flexbodies": [
+			["mesh", "[group]:"],
+			
+			["rudder", ["rudder"]]
+		],
+
+		"nodes":[
+			["id", "posX", "posY", "posZ"],
+			
+			{"frictionCoef":0.7},
+			{"nodeMaterial":"|NM_WOOD"},
+			{"nodeWeight":0.01},
+			{"collision":true},
+			
+			{"group":"rudder"},
+			["rl0",0.001,0.263,0.066],
+			["rr1",-0.003,0.263,0.066],
+			["rl2",0.001,0.264,0.081],
+			["rr3",-0.003,0.264,0.081],
+			["rl4",0.0,0.284,0.057],
+			["rr5",-0.002,0.284,0.057],
+			["rl6",0.001,0.347,0.275],
+			["rl7",0.0,0.347,0.052],
+			["rr8",-0.002,0.347,0.052],
+			["rr9",-0.003,0.347,0.275],
+			["rl10",0.001,0.365,0.058],
+			["rr11",-0.003,0.365,0.058],
+			["rl12",0.001,0.378,0.273],
+			["rr13",-0.003,0.378,0.273],
+			
+			{"group":""},
+		],
+
+		"beams":[
+			["id1:", "id2:"],
+			
+			{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+			{"beamSpring":3000,"beamDamp":1.0},
+			{"beamDeform":100,"beamStrength":125},
+			
+			["up2","rl6"],
+			["up2","rr9"],
+			["up2","rl12"],
+			["up2","rr13"],
+			
+			["left2","rl6"],
+			["left2","rr9"],
+			["left2","rl12"],
+			["left2","rr13"],
+			
+			["right2","rl6"],
+			["right2","rr9"],
+			["right2","rl12"],
+			["right2","rr13"],
+			
+			["rr9","rr13"],
+			["rr9","rr3"],
+			["rr5","rr8"],
+			["rl6","rr9"],
+			["rl6","rl12"],
+			["rl4","rr5"],
+			["rl6","rl2"],
+			["rl7","rr8"],
+			["rl2","rl0"],
+			["rr3","rr1"],
+			["rl12","rl10"],
+			["rr13","rr11"],
+			["rr1","rr11"],
+			["rl10","rl7"],
+			["rl12","rr9"],
+			["rl10","rr11"],
+			["rr13","rl12"],
+			["rl0","rr1"],
+			["rl6","rr3"],
+			["rr3","rl2"],
+			["rr11","rr9"],
+			["rl0","rl10"],
+			["rr1","rr5"],
+			["rr11","rr5"],
+			["rl4","rr8"],
+			["rr3","rr11"],
+			["rl10","rr8"],
+			["rr8","rr11"],
+			["rl6","rl10"],
+			["rl4","rl7"],
+			["rl4","rl0"],
+			["rr1","rl4"],
+			["rl12","rr11"],
+			["rl10","rl4"],
+			["rl2","rr1"],
+			["rl2","rl10"],
+			
+			["rl10","fl44"],
+			["rr11","fr45"],
+			
+			["rl10","fl49"],
+			["rr11","fr53"],
+			
+			["rr11","fl49"],
+			["rl10","fr53"],
+			
+			["rl7","fl43"],
+			["rr8","fr42"],
+			
+			["rr8","fl43"],
+			["rl7","fr42"],
+			
+			["rr1","fr35"],
+			["rr1","fr30"],
+			["rr1","fl34"],
+			
+			["rl0","fl34"],
+			["rl0","fl33"],
+			["rl0","fr35"],
+			
+			["rr3","fr30"],
+			["rr3","fr35"],
+			["rr3","fl34"],
+			
+			["rl2","fl34"],
+			["rl2","fl33"],
+			["rl2","fr35"],
+			["rr3","er5"],
+			["rl2","el1"],
+			
+
+			
+		],
+		
+		"hydros": [
+			["id1:","id2:"],
+			
+			{"beamSpring":2000,"beamDamp":1.0,"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+			["er9","rr11",{"inputSource":"yaw","inLimit":0.99,"outLimit":1.01,"inRate":0.1,"outRate":0.1,"inputFactor":-1}],
+			["el7","rl10",{"inputSource":"yaw","inLimit":0.99,"outLimit":1.01,"inRate":0.1,"outRate":0.1,"inputFactor":1}],
+			
+			{"beamSpring":3000,"beamDamp":1.0,"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+			["er9","rr13",{"inputSource":"yaw","inLimit":0.99,"outLimit":1.01,"inRate":0.1,"outRate":0.1,"inputFactor":-1}],
+			["el7","rl12",{"inputSource":"yaw","inLimit":0.99,"outLimit":1.01,"inRate":0.1,"outRate":0.1,"inputFactor":1}],
+
+		],
+
+		"triangles":[
+			["id1:", "id2:", "id3:"],
+			
+			{"dragCoef":500.0},
+			{"liftCoef": 33.0},
+			
+			{"group": "rudder"},
+			["rr3","rr9","rr11"],
+			["rl10","rl12","rl6"],
+			["rl6","rl2","rl10"],
+			["rl2","rl0","rl10"],
+			["rr9","rr13","rr11"],
+			["rr1","rr3","rr11"],
+			["rl4","rl10","rl0"],
+			["rr5","rr11","rr8"],
+			["rr8","rl7","rl4"],
+			["rr5","rr1","rr11"],
+		],
+	},
+}

@@ -1,0 +1,37 @@
+{
+"bindings" :   [
+    {
+    "control"           : "thumbly"           , 
+    "action"            : "pitch"         
+    }, 
+    {
+    "control"           : "thumblx"           , 
+    "action"            : "roll"          
+    }, 
+    {
+    "control"           : "btn_r"          , 
+    "action"            : "yawCW"      ,
+    }, 
+    {
+    "control"           : "btn_l"          , 
+    "action"            : "yawCCW"      ,
+    }, 
+    {
+    "control"           : "btn_a"          , 
+    "action"            : "bpower"      
+    }, 
+    {
+    "control"           : "btn_b"          , 
+    "action"            : "brake"      
+    }, 
+    {
+    "control"           : "btn_x"          , 
+    "action"            : "launch"      
+    },
+  ], 
+"name"              : "XBox Controller 1" , 
+"version"           : 1                   , 
+"devicetype"        : "xinput"            , 
+"vidpid"            : "XIDevice"          , 
+"guid"              : "xinput_device_XIDevice"
+}, 

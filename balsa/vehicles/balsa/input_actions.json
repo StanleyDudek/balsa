@@ -1,0 +1,30 @@
+// this file holds all the actions that only this specific vehicle can perform
+// ===========================================================================
+// the non self-descriptive fields are:
+// "onChange":   code to run when the controller position changes     (applies to: buttons, keys, pov hat, axes)
+// "onDown":     code to run when the controller becomes pressed down (applies to: buttons, keys, pov hat)
+// "onUp":       code to run when the controller is lifted up         (applies to: buttons, keys, pov hat)
+// "onRelative": code to run when the controller position changes     (applies to: mouse axis when holding right mouse button)
+// "ctx" (defaults to 'vlua'): where the code above ^ must be run. it can be:
+//    - vlua for vehicle lua async
+//    - elua for engine  lua async
+//    - tlua for engine  lua  sync
+//    - ui for javascript    async
+// "isCentered" (defaults to false): whether the axis values will be reported from -1 to +1 (true) or from 0 to +1 (false)
+// "order":      helps set the display order in the Controls menu
+{
+"ppowerAxis"  :{"order": 1,  "onChange":"custom_input.bpower(VALUE)", "title": "Plane Power Axis", "desc": "Accelerates plane" },
+"bpower"      :{"order": 2,  "onDown":"custom_input.bpower(VALUE)", "onUp":"custom_input.bpower(VALUE)", "title": "Plane Power", "desc": "Accelerates plane" },
+"brakeAxis"   :{"order": 3,  "onChange":"custom_input.bpower(VALUE * -1)", "title": "Plane Brake Axis", "desc": "Slows plane" },
+"brake"       :{"order": 4, "onDown":"custom_input.bpower(VALUE * -1)", "onUp":"custom_input.bpower(VALUE * -1)", "title": "Plane Brake", "desc": "Slows plane" },
+"pitch"       :{"order": 5,  "onChange":"custom_input.pitch(VALUE)", "isCentered": true, "title": "Plane Pitch Up / Down", "desc": "Climb and descend" },
+"pitchUp"     :{"order": 6,  "onDown":"custom_input.pitchUp(VALUE * -1)", "onUp":"custom_input.pitchUp(VALUE * -1)", "isCentered": true, "title": "Plane Pitch Up", "desc": "Climb" },
+"pitchDown"   :{"order": 7,  "onDown":"custom_input.pitchDown(VALUE)", "onUp":"custom_input.pitchDown(VALUE)", "isCentered": true, "title": "Plane Pitch Down", "desc": "Descend" },
+"roll"        :{"order": 8,  "onChange":"custom_input.roll(VALUE)", "isCentered": true, "title": "Plane Roll Left / Right", "desc": "Turn left and right" },
+"rollLeft"    :{"order": 9,  "onDown":"custom_input.rollLeft(VALUE * -1)", "onUp":"custom_input.rollLeft(VALUE * -1)", "isCentered": true, "title": "Plane Roll Left", "desc": "Turn left" },
+"rollRight"   :{"order": 10,  "onDown":"custom_input.rollRight(VALUE)", "onUp":"custom_input.rollRight(VALUE)", "isCentered": true, "title": "Plane Roll Right", "desc": "Turn right" },
+"yaw"         :{"order": 11,  "onChange":"custom_input.yaw(VALUE)", "isCentered": true, "title": "Plane Yaw CCW / CW", "desc": "Turn rudder counter-clockwise and clockwise" },
+"yawCCW"      :{"order": 12,  "onDown":"custom_input.yawCCW(VALUE * -1)", "onUp":"custom_input.yawCCW(VALUE * -1)", "isCentered": true, "title": "Plane Yaw Counter-Clockwise", "desc": "Turn rudder counter-clockwise" },
+"yawCW"       :{"order": 13,  "onDown":"custom_input.yawCW(VALUE)", "onUp":"custom_input.yawCW(VALUE)", "isCentered": true, "title": "Plane Yaw Clockwise", "desc": "Turn rudder clockwise" },
+"launch"      :{"order": 14, "onDown":"custom_input.launch(VALUE)", "title": "Plane Launch", "desc": "Launches plane" },
+}

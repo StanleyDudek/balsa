@@ -1,0 +1,193 @@
+{
+	"elevator":{
+		"information":{
+			"authors":"Dudekahedron",
+			"name":"elevator",
+			"value":0,
+		},
+		"slotType":"elevator",
+		
+		"flexbodies": [
+			["mesh", "[group]:"],
+			
+			["elevator", ["elevator"]]
+		],
+
+		"nodes":[
+			["id", "posX", "posY", "posZ"],
+			
+			{"frictionCoef":0.7},
+			{"nodeMaterial":"|NM_WOOD"},
+			{"nodeWeight":0.01},
+			{"collision":true},
+			
+			{"group":"elevator"},
+			["el0",0.046,0.257,0.035],
+			["el1",0.046,0.257,0.042],
+			["er2",-0.001,0.257,0.035],
+			["er3",-0.001,0.257,0.042],
+			["er4",-0.048,0.257,0.035],
+			["er5",-0.048,0.257,0.042],
+			["el6",0.188,0.349,0.035],
+			["el7",0.188,0.349,0.042],
+			["er8",-0.19,0.349,0.035],
+			["er9",-0.19,0.349,0.042],
+			["el10",0.188,0.39,0.035],
+			["el11",0.188,0.39,0.042],
+			["er12",-0.001,0.39,0.035],
+			["er13",-0.001,0.39,0.042],
+			["er14",-0.19,0.39,0.035],
+			["er15",-0.19,0.39,0.042],
+			
+			{"group":""},
+		],
+
+		"beams":[
+			["id1:", "id2:"],
+			
+			{"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+			{"beamSpring":3000,"beamDamp":1.0},
+			{"beamDeform":100,"beamStrength":125},
+			
+			["up2","el1"],
+			["up2","el7"],
+			["up2","er3"],
+			["up2","er5"],
+			["up2","er9"],
+			["up2","er13"],
+			
+			["ref2","el0"],
+			["ref2","el6"],
+			["ref2","el10"],
+			["ref2","er2"],
+			["ref2","er4"],
+			["ref2","er8"],
+			["ref2","er14"],
+			["ref2","er12"],
+			
+			["back","el11"],
+			["back","el10"],
+			
+			["back","er14"],
+			["back","er15"],
+			
+			{"beamSpring":5000,"beamDamp":1.0},
+			["er8","er14"],
+			["el6","el10"],
+			["er13","er12"],
+			["er4","er2"],
+			["el6","el0"],
+			["er14","er12"],
+			["er9","er8"],
+			["el6","el7"],
+			["er9","er15"],
+			["el7","el11"],
+			["er3","er2"],
+			["er5","er3"],
+			["el7","el1"],
+			["er15","er13"],
+			["el7","er13"],
+			["er8","er4"],
+			["er13","el11"],
+			["er3","el1"],
+			["er3","er13"],
+			["er9","er13"],
+			["el1","er13"],
+			["er15","er8"],
+			["er5","er13"],
+			["er12","er8"],
+			["er12","el10"],
+			["er2","el0"],
+			["er9","er5"],
+			["er14","er15"],
+			["er2","er12"],
+			["el7","el10"],
+			["er4","er12"],
+			["el1","el6"],
+			["el11","el10"],
+			["er9","er4"],
+			["el0","er12"],
+			["el6","er12"],
+			["er5","er2"],
+			["er4","er5"],
+			["er15","er12"],
+			["er3","el0"],
+			["el11","er12"],
+			["el0","el1"],
+			
+			["el0","fl39"],
+			["el0","fl38"],
+			["el1","fl38"],
+			["el1","fl39"],
+			
+			["er4","fr36"],
+			["er4","fr37"],
+			["er5","fr37"],
+			["er5","fr36"],
+
+			["er3","fr36"],
+			["er3","fr37"],
+			["er2","fr37"],
+			["er2","fr36"],
+			["er3","fl39"],
+			["er3","fl38"],
+			["er2","fl38"],
+			["er2","fl39"],
+
+
+			["er13","fl48"],
+			["er13","fr52"],
+			["er13","fl49"],
+			["er13","fr53"],
+			
+			["er12","fl46"],
+			["er12","fr50"],
+			["er12","fl47"],
+			["er12","fr51"],
+			
+			
+
+			
+		],
+		
+		"hydros": [
+			["id1:","id2:"],
+			{"beamSpring":2500,"beamDamp":1.0,"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+			["up2","el11",{"inputSource":"pitch","inLimit":0.975,"outLimit":1.025,"inRate":0.05,"outRate":0.05,"inputFactor":1}],
+			["up2","er15",{"inputSource":"pitch","inLimit":0.975,"outLimit":1.20,"inRate":0.05,"outRate":0.05,"inputFactor":1}],
+		],
+		
+		"triangles":[
+			["id1:","id2:","id3:"],
+			
+			{"dragCoef":120.0},
+			{"liftCoef": 1000.0},
+			{"stallAngle": 1.2},
+			
+			{"group": "elevator"},
+			["el7","el11","er13"],
+			["el0","er3","er2"],
+			["er4","er9","er8"],
+			["el6","el1","el0"],
+			["er12","er15","er13"],
+			["er12","el11","el10"],
+			["el10","el7","el6"],
+			["er8","er15","er14"],
+			["er2","er5","er4"],
+			["er13","er15","er9"],
+			["er9","er5","er13"],
+			["er5","er3","er13"],
+			["er3","el1","er13"],
+			["el1","el7","er13"],
+			["el10","el11","el7"],
+			["er12","er13","el11"],
+			["er12","er14","er15"],
+			["er8","er9","er15"],
+			["er4","er5","er9"],
+			["er2","er3","er5"],
+			["el0","el1","er3"],
+			["el6","el7","el1"],
+			
+		],
+	},
+}

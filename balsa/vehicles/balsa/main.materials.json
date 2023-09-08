@@ -1,0 +1,54 @@
+{
+  "balsawood": {
+    "name": "balsawood",
+    "mapTo": "balsawood",
+    "class": "material",
+    "persistentId": "b0bee9bd-7f10-4961-a0e1-4dce532482a9",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.507067025,
+          0.37864691,
+          0.216496795,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "metal": {
+    "name": "metal",
+    "mapTo": "metal",
+    "class": "material",
+    "persistentId": "4f8f86ff-8019-4932-8ad1-d2bd6cfaf475",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.139004901,
+          0.178996593,
+          0.310811907,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  }
+}
